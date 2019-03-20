@@ -1,0 +1,4 @@
+echo "FROM mamenko/serve:onbuild" > Dockerfile
+docker build -t ${1:-site} ${2:+--build-arg DIR=$2} .
+rm Dockerfile
+echo "run container: docker run --restart always -d -p 80:80 ${1:-site}"

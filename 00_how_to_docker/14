@@ -1,0 +1,7 @@
+docker network create zerg
+docker network connect zerg spawning-pool
+docker run -p 8080:80 --name lair --network zerg \
+-e WORDPRESS_DB_HOST=spawning-pool \
+-e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=Kerrigan \
+-e WORDPRESS_DB_NAME=wordpress -e WORDPRESS_TABLE_PREFIX=wp_ \
+-d wordpress

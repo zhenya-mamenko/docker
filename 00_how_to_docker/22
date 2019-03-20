@@ -1,0 +1,1 @@
+docker-machine ssh Aiur eval $(docker swarm join-token worker | awk '$0 ~ /--token/')

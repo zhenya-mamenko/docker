@@ -1,0 +1,1 @@
+docker run -p 8081:80 -e PMA_HOST=spawning-pool --name roach-warden --network zerg -d phpmyadmin/phpmyadmin

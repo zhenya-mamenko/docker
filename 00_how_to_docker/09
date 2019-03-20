@@ -1,0 +1,4 @@
+#docker run -it --rm debian sh
+su
+apt-get install gcc
+apt-get install git

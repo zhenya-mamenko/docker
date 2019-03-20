@@ -1,0 +1,4 @@
+# use docker build --build-arg DIR=<./app_dir/ | /full/path/to/your/app/directory/>
+FROM ft-rails:on-build
+EXPOSE 3000
+CMD ["rails", "s", "-b", "0.0.0.0", "-p", "3000"]
